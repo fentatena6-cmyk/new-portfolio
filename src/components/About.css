@@ -68,3 +68,16 @@
   border-radius: 8px;
   transition: width 1s ease-in-out;
 }
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}

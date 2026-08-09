@@ -7,6 +7,7 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  const [status, setStatus] = useState('')
 
   const handleChange = (e) => {
     setFormData({
@@ -15,10 +16,40 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Thank you for your message! I will get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setStatus('Sending...')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '831ae67d-5e1a-4c92-8202-dec616a72009',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        alert('Thank you for your message! I will get back to you soon.')
+        setFormData({ name: '', email: '', message: '' })
+        setStatus('')
+      } else {
+        alert('Oops! Something went wrong. Please try again.')
+        setStatus('')
+      }
+    } catch (error) {
+      console.error(error)
+      alert('Oops! Something went wrong. Please try again.')
+      setStatus('')
+    }
   }
 
   return (
@@ -29,19 +60,38 @@ const Contact = () => {
           <div className="contact-info">
             <h3>Let's Connect</h3>
             <p>I'm always interested in hearing about new opportunities and exciting projects.</p>
+            
             <div className="contact-details">
-              <div className="contact-item">
-                <span>📧</span>
-                <p>fentatena6@gmail.com</p>
-              </div>
               <div className="contact-item">
                 <span>📱</span>
                 <p>+251 970037055</p>
               </div>
+
               <div className="contact-item">
                 <span>📍</span>
                 <p>Ethiopia</p>
               </div>
+            </div>
+
+            {/* Social Buttons */}
+            <div className="social-buttons">
+              <a 
+                href="https://github.com/fentatena6-cmyk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-btn github-btn"
+              >
+                <span>💻</span> GitHub
+              </a>
+              
+              <a 
+                href="https://t.me/tenaf21" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-btn telegram-btn"
+              >
+                <span>✈️</span> Telegram
+              </a>
             </div>
           </div>
           
@@ -70,7 +120,9 @@ const Contact = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={status === 'Sending...'}>
+              {status === 'Sending...' ? 'Sending...' : 'Send Message'}
+            </button>
           </form>
         </div>
       </div>

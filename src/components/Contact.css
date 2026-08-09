@@ -88,3 +88,59 @@
     grid-template-columns: 1fr;
   }
 }
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #4a6cf7; /* ስትነኪው የሚቀየረው ከለር */
+  text-decoration: underline;
+}
+/* Social Buttons Styling */
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff !important; /* የጽሁፉ ከለር ነጭ እንዲሆን */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn span {
+  font-size: 1.2rem;
+}
+
+/* GitHub Button Colors */
+.github-btn {
+  background-color: #333333;
+}
+
+.github-btn:hover {
+  background-color: #000000;
+  transform: translateY(-3px); /* ሲነካ ትንሽ ወደ ላይ ብድግ እንዲል */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Telegram Button Colors */
+.telegram-btn {
+  background-color: #0088cc;
+}
+
+.telegram-btn:hover {
+  background-color: #006699;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 136, 204, 0.3);
+}
