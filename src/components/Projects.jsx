@@ -4,11 +4,11 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'Weather Dashboard',
-      description: 'Real-time weather application with API integration',
-      icon: '☀️',
-      tags: ['React', 'API', 'CSS'],
-      liveUrl: 'https://weather-dashboard.vercel.app', // የዌብሳይቱ የቀጥታ ሊንክ
+      title: 'IT Asset Management',
+      description: 'System for tracking and managing organizational IT hardware and assets',
+      icon: '💻',
+      tags: ['React', 'CSS', 'JavaScript'],
+      liveUrl: 'https://it-asset-management.vercel.app', 
       githubUrl: 'https://github.com/fentatena6-cmyk'
     },
     {
@@ -17,7 +17,7 @@ const Projects = () => {
       description: 'Modern portfolio built with React and Vite',
       icon: '🎨',
       tags: ['React', 'Vite', 'CSS'],
-      liveUrl: '', 
+      liveUrl: '', // የፖርትፎሊዮው የ Live Demo ሊንክ ተወግዷል
       githubUrl: 'https://github.com/fentatena6-cmyk'
     }
   ]
@@ -39,7 +39,7 @@ const Projects = () => {
             </div>
 
             <div className="project-buttons">
-              {}
+              {/* liveUrl ካለ ብቻ Live Demo ቁልፉን ያሳያል */}
               {project.liveUrl && (
                 <a 
                   href={project.liveUrl} 
