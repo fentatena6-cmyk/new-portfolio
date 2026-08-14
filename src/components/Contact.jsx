@@ -2,6 +2,8 @@ import './Contact.css'
 
 const Contact = () => {
   const myEmail = 'fentatena6@gmail.com'
+ 
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}&su=Portfolio%20Inquiry&body=Hello%20Tena,%20I%20want%20to%20connect%20with%20you.`
 
   return (
     <section id="contact" className="contact">
@@ -24,7 +26,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social & Email Buttons */}
+            {}
             <div className="social-buttons" style={{ justifyContent: 'center' }}>
               <a 
                 href="https://github.com/fentatena6-cmyk" 
@@ -46,7 +48,9 @@ const Contact = () => {
 
               {}
               <a 
-                href={`mailto:${myEmail}?subject=Portfolio%20Inquiry&body=Hello%20Tena,%20I%20want%20to%20connect%20with%20you.`}
+                href={gmailUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-btn email-btn"
                 style={{
                   backgroundColor: '#ea4335',
