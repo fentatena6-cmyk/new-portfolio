@@ -9,16 +9,16 @@ const Projects = () => {
       icon: '☀️',
       tags: ['React', 'API', 'CSS'],
       liveUrl: 'https://weather-dashboard.vercel.app', // የዌብሳይቱ የቀጥታ ሊንክ
-      githubUrl: 'https://github.com/TenaFenta/weather-dashboard' // የ GitHub ኮድሽ ሊንክ
+      githubUrl: 'https://github.com/fentatena6-cmyk'
     },
     {
       id: 2,
       title: 'Portfolio Website',
       description: 'Modern portfolio built with React and Vite',
       icon: '🎨',
-      tags: ['React', 'Vite', 'CSS3'],
-      liveUrl: 'https://tenafenta.github.io', // የፖርትፎሊዮሽ የቀጥታ ሊንክ
-      githubUrl: 'https://github.com/fentatena6-cmyk' // የ GitHub ኮድሽ ሊንክ
+      tags: ['React', 'Vite', 'CSS'],
+      liveUrl: '', 
+      githubUrl: 'https://github.com/fentatena6-cmyk'
     }
   ]
 
@@ -38,16 +38,19 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* ሁለቱም ቁልፎች አብረው ተቀምጠዋል */}
             <div className="project-buttons">
-              <a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="view-btn live-btn"
-              >
-                Live Demo
-              </a>
+              {}
+              {project.liveUrl && (
+                <a 
+                  href={project.liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="view-btn live-btn"
+                >
+                  Live Demo
+                </a>
+              )}
+              
               <a 
                 href={project.githubUrl} 
                 target="_blank" 
