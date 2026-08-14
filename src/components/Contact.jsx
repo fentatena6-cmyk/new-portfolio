@@ -1,43 +1,18 @@
-import { useState } from 'react'
 import './Contact.css'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    
-    // እዚህ ጋር የራስሽን ትክክለኛ ኢሜይል አስገብዪ
-    const myEmail = 'fentatena6@gmail.com'
-    
-    const subject = `Message from ${formData.name} (${formData.email})`
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
-    
-    // የኢሜይል አፕሊኬሽኑን በቀጥታ ይከፍታል
-    window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${body}`
-  }
+  const myEmail = 'fentatena6@gmail.com'
 
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
         <h2 className="section-title">Get In Touch</h2>
         <div className="contact-content">
-          <div className="contact-info">
+          <div className="contact-info" style={{ width: '100%', textAlign: 'center' }}>
             <h3>Let's Connect</h3>
             <p>I'm always interested in hearing about new opportunities and exciting projects.</p>
             
-            <div className="contact-details">
+            <div className="contact-details" style={{ justifyContent: 'center', marginBottom: '20px' }}>
               <div className="contact-item">
                 <span>📱</span>
                 <p>+251 970037055</p>
@@ -49,8 +24,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Buttons */}
-            <div className="social-buttons">
+            {/* Social & Email Buttons */}
+            <div className="social-buttons" style={{ justifyContent: 'center' }}>
               <a 
                 href="https://github.com/fentatena6-cmyk" 
                 target="_blank" 
@@ -68,38 +43,26 @@ const Contact = () => {
               >
                 <span>✈️</span> Telegram
               </a>
+
+              <a 
+                href={`mailto:${myEmail}`}
+                className="social-btn email-btn"
+                style={{
+                  backgroundColor: '#ea4335',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItem: 'center',
+                  gap: '8px',
+                  fontWeight: 'bold'
+                }}
+              >
+                <span>✉️</span> Email
+              </a>
             </div>
           </div>
-          
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit">
-              Send Email
-            </button>
-          </form>
         </div>
       </div>
     </section>
