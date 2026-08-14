@@ -15,8 +15,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
+        {/* ሎጎ ከኮምፒዩተር ምልክት ጋር */}
         <div className="logo">
-          <h2>MyPortfolio</h2>
+          <a href="#home" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span className="logo-icon">💻</span> <h2>MyPortfolio</h2>
+          </a>
         </div>
         
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
