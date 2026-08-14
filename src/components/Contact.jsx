@@ -45,22 +45,24 @@ const Contact = () => {
               </a>
 
               <a 
-                href={`mailto:${myEmail}`}
-                className="social-btn email-btn"
-                style={{
-                  backgroundColor: '#ea4335',
-                  color: 'white',
-                  padding: '10px 20px',
-                  borderRadius: '5px',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItem: 'center',
-                  gap: '8px',
-                  fontWeight: 'bold'
-                }}
-              >
-                <span>✉️</span> Email
-              </a>
+  href={`mailto:fentatena6-cmyk@gmail.com`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-btn email-btn"
+  style={{
+    backgroundColor: '#ea4335',
+    color: 'white',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    textDecoration: 'none',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    fontWeight: 'bold'
+  }}
+>
+  <span>✉️</span> Email
+</a>
             </div>
           </div>
         </div>
