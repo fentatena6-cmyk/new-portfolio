@@ -1,29 +1,38 @@
 /* መላውን የHero ክፍል የሚቆጣጠር */
 .hero {
   width: 100%;
-  min-height: 80vh; /* ቁመቱን እንደ አስፈላጊነቱ ማስተካከል ይቻላል */
-  background-color: #6a69f0; /* ምስሉ ላይ ያለውን ሰማያዊ ቀለም */
+  min-height: 80vh;
+  background-color: #6a69f0;
   color: white;
   display: flex;
-  justify-content: center; /* በወርድ መሃል ላይ ለማድረግ */
-  align-items: center; /* በቁመት መሃል ላይ ለማድረግ */
-  padding: 0 50px; /* ከግራና ቀኝ ትንሽ ክፍተት ለመስጠት */
-  overflow: hidden; /* የማርኪው ጽሑፍ ከዳር እንዳይወጣ */
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  overflow: hidden;
 }
 
 /* ጽሑፉንና ምስሉን የያዘው ዋናው ኮንቴይነር */
 .hero-content {
   width: 100%;
-  max-width: 1200px; /* ዌብሳይቱ በጣም እንዳይለጠጥ */
+  max-width: 1200px;
   display: flex;
-  justify-content: space-between; /* ጽሑፍን በግራ፣ ምስልን በቀኝ ያስጠጋል */
-  align-items: center; /* ሁለቱንም በቁመት እኩል ለማድረግ */
-  flex-direction: row; /* ፎቶውን በቀኝ በኩል ለማድረግ */
+  justify-content: space-between;
+  align-items: center;
+  /* እዚህ ነው ለውጡ፡ ፎቶው በግራ እንዲሆን flex-direction እንቀይራለን */
+  flex-direction: row; 
 }
 
-/* የግራ በኩል ጽሑፎች */
+/* የግራ በኩል ምስል (አሁን ፎቶው እዚህ ነው) */
+.hero-image-container {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-start; /* ፎቶውን ግራ ዳር ያስጠጋል */
+  margin-right: 50px; /* ከጽሑፉ ትንሽ ክፍተት */
+}
+
+/* የቀኝ በኩል ጽሑፎች */
 .hero-text {
-  flex: 1; /* ያለውን ባዶ ቦታ እንዲይዝ */
+  flex: 1;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -31,21 +40,21 @@
   justify-content: center;
 }
 
-/* የ Marquee ማስተካከያ - አሁን መታየቱን ለማረጋገጥ */
+/* የ Marquee ማስተካከያ */
 .title-marquee {
   width: 100%;
-  overflow: hidden; /* ማርኪው ከዳር እንዳይወጣ */
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
 .title-marquee marquee {
   font-size: 2rem;
   font-weight: bold;
-  color:lawngreen;
+  color: lawngreen;
 }
 
 .title-marquee .highlight {
-  color: #ffdb4d; /* ቢጫ ቀለም ለማጉላት */
+  color: #ffdb4d;
 }
 
 .hero-text h2 {
@@ -60,7 +69,7 @@
   margin-bottom: 30px;
 }
 
-/* የቁልፎቹ (Buttons) ዲዛይንና አቀማመጥ */
+/* የቁልፎቹ (Buttons) ዲዛይን */
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -77,7 +86,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* የመጀመሪያው ቁልፍ (View My Work) */
 .btn-primary {
   background-color: #ffdb4d;
   color: #1a1a1a;
@@ -90,7 +98,6 @@
   transform: translateY(-3px);
 }
 
-/* ሁለተኛው ቁልፍ (Contact Me) */
 .btn-secondary {
   background-color: transparent;
   color: #ffffff;
@@ -103,19 +110,11 @@
   transform: translateY(-3px);
 }
 
-/* የቀኝ በኩል ምስል */
-.hero-image-container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end; /* ምስሉን ቀኝ ዳር ያስጠጋል */
-  margin-left: 50px; /* ከጽሑፉ ትንሽ ክፍተት */
-}
-
 .profile-img {
-  width: 350px; /* የምስሉ ወርድ */
-  height: 350px; /* የምስሉ ቁመት */
-  border-radius: 50%; /* ሙሉ በሙሉ ክብ ለማድረግ */
-  object-fit: cover; /* ምስሉ እንዳይለጠጥ */
-  border: 5px solid white; /* የነጭ ዙሪያ መስመር */
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); /* የሚያበራው ሰማያዊ ቀለም (Glow) */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
 }
