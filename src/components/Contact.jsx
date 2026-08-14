@@ -2,8 +2,9 @@ import './Contact.css'
 
 const Contact = () => {
   const myEmail = 'fentatena6@gmail.com'
-  const emailSubject = encodeURIComponent('Portfolio Inquiry')
-  const emailBody = encodeURIComponent('Hello Tena,\n\nI visited your portfolio and wanted to connect with you.')
+  
+  // ጽሑፉን በጣም ቀለል ባለና ንጹህ መልኩ እናስቀምጠው
+  const mailtoLink = `mailto:${myEmail}?subject=Portfolio%20Inquiry&body=Hello%20Tena,%20I%20want%20to%20connect%20with%20you.`
 
   return (
     <section id="contact" className="contact">
@@ -47,7 +48,7 @@ const Contact = () => {
               </a>
 
               <a 
-                href={`mailto:${myEmail}?subject=${emailSubject}&body=${emailBody}`}
+                href={mailtoLink}
                 className="social-btn email-btn"
                 style={{
                   backgroundColor: '#ea4335',
