@@ -47,23 +47,25 @@ const Contact = () => {
                 <span>✈️</span> Telegram
               </a>
 
-              <a 
-                href={mailtoLink}
-                className="social-btn email-btn"
-                style={{
-                  backgroundColor: '#ea4335',
-                  color: 'white',
-                  padding: '10px 20px',
-                  borderRadius: '5px',
-                  textDecoration: 'none',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontWeight: 'bold'
-                }}
-              >
-                <span>✉️</span> Email
-              </a>
+             <a 
+  href={`mailto:fentatena6@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Tena,%20I%20want%20to%20connect%20with%20you.`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-btn email-btn"
+  style={{
+    backgroundColor: '#ea4335',
+    color: 'white',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    textDecoration: 'none',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    fontWeight: 'bold'
+  }}
+>
+  <span>✉️</span> Email
+</a>
             </div>
           </div>
         </div>
