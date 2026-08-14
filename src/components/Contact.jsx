@@ -2,8 +2,23 @@ import './Contact.css'
 
 const Contact = () => {
   const myEmail = 'fentatena6@gmail.com'
-  // በኮምፒዩተርም ሆነ በስልክ በብራውዘር ውስጥ ጂሜይልን በቀጥታ የሚከፍት ሊንክ
-  const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`
+
+  // በኮምፒዩተር እና በስልክ በአግባቡ እንዲሰራ የሚያደርግ ፋንክሽን
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    
+    // ስልክ መሆኑን ወይም አለመሆኑን ለማረጋገጥ
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // ስልክ ከሆነ በቀጥታ mailto ይጠቀማል (አፕሊኬሽኑን ለመክፈት)
+      window.location.href = `mailto:${myEmail}`;
+    } else {
+      // ኮምፒዩተር ከሆነ በብራውዘር ውስጥ የጂሜይል ዌብ ገጽ አዲስ ታብ ከፍቶ ያሳያል
+      const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`;
+      window.open(gmailWebUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <section id="contact" className="contact">
@@ -46,11 +61,10 @@ const Contact = () => {
                 <span>✈️</span> Telegram
               </a>
 
-              {/* Gmail Web Link with target="_blank" */}
+              {/* Universal Email Button using onClick function */}
               <a 
-                href={gmailWebUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${myEmail}`}
+                onClick={handleEmailClick}
                 className="social-btn email-btn"
                 style={{
                   backgroundColor: '#ea4335',
@@ -61,7 +75,8 @@ const Contact = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  fontWeight: 'bold'
+                  fontWeight: 'bold',
+                  cursor: 'pointer'
                 }}
               >
                 <span>✉️</span> Email
