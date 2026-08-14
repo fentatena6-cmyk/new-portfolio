@@ -7,7 +7,6 @@ const Contact = () => {
     email: '',
     message: ''
   })
-  const [status, setStatus] = useState('')
 
   const handleChange = (e) => {
     setFormData({
@@ -16,40 +15,17 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    setStatus('Sending...')
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: '831ae67d-5e1a-4c92-8202-dec616a72009',
-          name: formData.name,
-          email: formData.email,
-          message: formData.message
-        })
-      })
-
-      const result = await response.json()
-
-      if (result.success) {
-        alert('Thank you for your message! I will get back to you soon.')
-        setFormData({ name: '', email: '', message: '' })
-        setStatus('')
-      } else {
-        alert('Oops! Something went wrong. Please try again.')
-        setStatus('')
-      }
-    } catch (error) {
-      console.error(error)
-      alert('Oops! Something went wrong. Please try again.')
-      setStatus('')
-    }
+    
+    // እዚህ ጋር የራስሽን ትክክለኛ ኢሜይል አስገብዪ
+    const myEmail = 'fentatena6-cmyk@gmail.com'
+    
+    const subject = `Message from ${formData.name} (${formData.email})`
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
+    
+    // የኢሜይል አፕሊኬሽኑን በቀጥታ ይከፍታል
+    window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${body}`
   }
 
   return (
@@ -120,8 +96,8 @@ const Contact = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" disabled={status === 'Sending...'}>
-              {status === 'Sending...' ? 'Sending...' : 'Send Message'}
+            <button type="submit">
+              Send Email
             </button>
           </form>
         </div>
