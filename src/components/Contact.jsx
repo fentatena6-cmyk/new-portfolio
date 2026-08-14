@@ -2,6 +2,8 @@ import './Contact.css'
 
 const Contact = () => {
   const myEmail = 'fentatena6@gmail.com'
+  // በኮምፒዩተርም ሆነ በስልክ በብራውዘር ውስጥ ጂሜይልን በቀጥታ የሚከፍት ሊንክ
+  const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`
 
   return (
     <section id="contact" className="contact">
@@ -44,9 +46,11 @@ const Contact = () => {
                 <span>✈️</span> Telegram
               </a>
 
-              {/* Email Link with clean mailto (Subject እና Body በባዶው ይቀራሉ) */}
+              {/* Gmail Web Link with target="_blank" */}
               <a 
-                href={`mailto:${myEmail}`}
+                href={gmailWebUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-btn email-btn"
                 style={{
                   backgroundColor: '#ea4335',
