@@ -7,7 +7,7 @@ const Projects = () => {
       title: 'IT Asset Management',
       description: 'System for tracking and managing organizational IT hardware and assets',
       icon: '💻',
-      tags: ['React', 'CSS', 'JavaScript'],
+      tags: ['React', 'JavaScript', 'HTML', 'CSS', 'PHP', 'MySQL'],
       liveUrl: 'https://it-asset-management.vercel.app', 
       githubUrl: 'https://github.com/fentatena6-cmyk'
     },
@@ -16,8 +16,8 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'Modern portfolio built with React and Vite',
       icon: '🎨',
-      tags: ['React', 'Vite', 'CSS'],
-      liveUrl: '', // የፖርትፎሊዮው የ Live Demo ሊንክ ተወግዷል
+      tags: ['React', 'CSS', 'HTML', 'JavaScript'],
+      liveUrl: '', 
       githubUrl: 'https://github.com/fentatena6-cmyk'
     }
   ]
@@ -39,7 +39,6 @@ const Projects = () => {
             </div>
 
             <div className="project-buttons">
-              {/* liveUrl ካለ ብቻ Live Demo ቁልፉን ያሳያል */}
               {project.liveUrl && (
                 <a 
                   href={project.liveUrl} 
