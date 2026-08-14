@@ -45,7 +45,7 @@ const Contact = () => {
               </a>
 
               <a 
-  href={`mailto:fentatena6-cmyk@gmail.com`}
+  href={`mailto:fentatena6@gmail.com`}
   target="_blank"
   rel="noopener noreferrer"
   className="social-btn email-btn"
