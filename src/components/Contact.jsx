@@ -1,7 +1,6 @@
 import './Contact.css'
 
 const Contact = () => {
-  // እዚህ ጋር የአንቺን ኢሜይል አስገብዪ
   const myEmail = 'fentatena6@gmail.com'
 
   return (
@@ -45,9 +44,9 @@ const Contact = () => {
                 <span>✈️</span> Telegram
               </a>
 
-              {/* Direct Mailto Link for Mobile & Mail Apps */}
+              {/* Email Link with clean mailto (Subject እና Body በባዶው ይቀራሉ) */}
               <a 
-                href={`mailto:${myEmail}?subject=Portfolio%20Inquiry&body=Hello%20Tena,%20I%20want%20to%20connect%20with%20you.`}
+                href={`mailto:${myEmail}`}
                 className="social-btn email-btn"
                 style={{
                   backgroundColor: '#ea4335',
