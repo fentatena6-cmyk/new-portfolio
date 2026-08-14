@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault()
     
     // እዚህ ጋር የራስሽን ትክክለኛ ኢሜይል አስገብዪ
-    const myEmail = 'fentatena6-cmyk@gmail.com'
+    const myEmail = 'fentatena6@gmail.com'
     
     const subject = `Message from ${formData.name} (${formData.email})`
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
