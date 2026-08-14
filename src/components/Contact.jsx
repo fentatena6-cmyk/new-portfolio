@@ -1,6 +1,7 @@
 import './Contact.css'
 
 const Contact = () => {
+  // እዚህ ጋር የአንቺን ትክክለኛ ኢሜይል አረጋግጪ
   const myEmail = 'fentatena6@gmail.com'
 
   return (
@@ -45,24 +46,22 @@ const Contact = () => {
               </a>
 
               <a 
-  href={`mailto:fentatena6@gmail.com`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="social-btn email-btn"
-  style={{
-    backgroundColor: '#ea4335',
-    color: 'white',
-    padding: '10px 20px',
-    borderRadius: '5px',
-    textDecoration: 'none',
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    fontWeight: 'bold'
-  }}
->
-  <span>✉️</span> Email
-</a>
+                href={`mailto:${myEmail}?subject=Portfolio%20Inquiry&body=Hello%20Tena,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20wanted%20to%20connect%20with%20you.`}
+                className="social-btn email-btn"
+                style={{
+                  backgroundColor: '#ea4335',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontWeight: 'bold'
+                }}
+              >
+                <span>✉️</span> Email
+              </a>
             </div>
           </div>
         </div>
