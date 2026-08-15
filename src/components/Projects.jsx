@@ -4,7 +4,7 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'IT Asset Management',
+      title: 'QRoute: Smart ScanWay Platform!',
       description: 'System for tracking and managing organizational IT hardware and assets',
       icon: '💻',
       tags: ['React', 'JavaScript', 'HTML', 'CSS', 'PHP', 'MySQL'],
