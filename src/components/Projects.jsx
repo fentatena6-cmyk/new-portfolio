@@ -9,7 +9,7 @@ const Projects = () => {
       icon: '💻',
       tags: ['React', 'JavaScript', 'HTML', 'CSS', 'PHP', 'MySQL'],
       liveUrl: 'https://it-asset-management.vercel.app', 
-      githubUrl: 'https://github.com/fentatena6-cmyk'
+      githubUrl: 'https://github.com/fentatena6-cmyk/cs-projects' // ወደ cs-projects ሪፖዚቶሪ ይቀየራል
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const Projects = () => {
       icon: '🎨',
       tags: ['React', 'CSS', 'HTML', 'JavaScript'],
       liveUrl: '', 
-      githubUrl: 'https://github.com/fentatena6-cmyk'
+      githubUrl: 'https://github.com/fentatena6-cmyk/new-portfolio' // ወደ new-portfolio ሪፖዚቶሪ ይቀየራል
     }
   ]
 
