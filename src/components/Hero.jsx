@@ -26,10 +26,10 @@ const Hero = () => {
           <h2>React Developer & UI Enthusiast</h2>
           
           <p className="description">
-           I graduated in Computer Science and I developed an IT Asset Management system.
+           I graduated in Computer Science and I developed QRoute: Smart ScanWay Platform.
           </p>
 
-          {/* በሚያምር ዲዛይን የተሰሩ ቁልፎች */}
+          {}
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>
             <a href="#contact" className="btn btn-secondary">Contact Me</a>
