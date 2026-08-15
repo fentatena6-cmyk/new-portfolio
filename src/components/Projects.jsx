@@ -8,7 +8,7 @@ const Projects = () => {
       description: 'System for tracking and managing organizational IT hardware and assets',
       icon: '💻',
       tags: ['React', 'JavaScript', 'HTML', 'CSS', 'PHP', 'MySQL'],
-      liveUrl: '', 
+      liveUrl: 'https://it-asset-management.vercel.app', 
       githubUrl: 'https://github.com/fentatena6-cmyk/cs-projects' // ወደ cs-projects ሪፖዚቶሪ ይቀየራል
     },
     {
